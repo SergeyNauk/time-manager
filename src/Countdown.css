@@ -1,10 +1,11 @@
 .countdownHeader {
   margin-top: 10px;
   display: inline-block; }
-  .countdownHeader p {
-    margin-left: 10px;
-    font-size: 1rem;
-    color: #9400D3; }
+
+.countdownHeader p {
+  margin-left: 10px;
+  font-size: 1rem;
+  color: #9400D3; }
 
 .menu {
   width: 100%;
@@ -15,11 +16,14 @@
   margin-top: 2px; }
 
 .event {
+  width: 71%;
   margin-top: 15px;
   margin-left: 30px;
   color: #9400D3;
-  font-size: 1.5rem;
-  text-decoration: underline; }
+  font-size: 1.25rem;
+  border: 2px solid #9400D3;
+  border-radius: 5px;
+  padding: 5px; }
 
 .button {
   margin-left: 10px;
@@ -29,4 +33,6 @@
   cursor: pointer;
   outline: none;
   border: 0;
-  padding: 6px; }
+  padding: 6px;
+  position: absolute;
+  left: 65%; }

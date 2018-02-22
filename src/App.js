@@ -78,7 +78,21 @@ class App extends Component {
                             borderRadius: '6px'
                         }}
                     />
-                    <Route path = "/" component = { Home } />
+                    <FlatButton
+                        containerElement = { <Link to="/"/> }
+                        label = "Home"
+                        hoverColor = '#800080'
+                        rippleColor="white"
+                        style = {{
+                            display: 'inline-block',
+                            marginLeft: '10px',
+                            marginTop: '10px',
+                            color: '#9400D3',
+                            border: 'solid 1px',
+                            borderRadius: '6px'
+                        }}
+                    />
+                    <Route exact path = "/" component = { Home } />
                     <Route path = "/Time" component = { Time } />
                     <Route path = "/Alarm_clock" component ={ Alarm_clock } />
                     <Route path = "/Countdown" component = { Countdown } />
