@@ -36,8 +36,7 @@ table {
   color: white;
   background-color: #9400D3;
   text-align: center; }
-
-.mainHeader h1 {
-  display: inline-block;
-  margin-top: 30px;
-  font-size: 2.5rem; }
+  .mainHeader h1 {
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 2.5rem; }

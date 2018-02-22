@@ -176,6 +176,7 @@ class Countdown extends Component {
                             break;
                         case 1:
                             valueDay = 'день';
+                            break;
                         case 2:
                         case 3:
                         case 4:
@@ -487,18 +488,18 @@ class Countdown extends Component {
                             thisDiv.innerHTML = '';
                         }
                     } else {
-                        clearInterval(this.interval);
+                        clearInterval(this.interval);  //cleanInterval if our component destroyed
                     }
                 }
             }
  /*--------------------------END pattern Factory-------------------------------------------------------------------*/
-           if (eventDate > thisDate && eventName !="") {
+           if (eventDate > thisDate && eventName !="") {// verification of user inputs
                this.setState({
                    eventCounter: this.state.eventCounter + 1
                });
 
                let container = document.querySelector('.container');
-               let template = `<div class="event" data-numberDiv=${this.state.eventCounter}><span></span><button class="button" data-click="true" onclick="this.setAttribute('data-click','false')">DELETE EVENT</button></div>`
+               let template = `<div class="event" data-numberDiv=${this.state.eventCounter}><span class="font-effect-fire-animation"></span><button class="button" data-click="true" onclick="this.setAttribute('data-click','false')">DELETE EVENT</button></div>`
                container.insertAdjacentHTML('beforeend', template);
 
                let event = new Event(this.state.eventCounter,eventName,eventDate);
@@ -508,11 +509,11 @@ class Countdown extends Component {
             }
     }
 
-    componentWillUnmount() {
+    componentWillUnmount() {  // method at work, before delete component
         let buttonDeletCollection = document.querySelectorAll('[data-click=true]');
         let buttonDeleteArr = [...buttonDeletCollection];
 
-        buttonDeleteArr.forEach((elem)=>{
+        buttonDeleteArr.forEach((elem)=>{   // set attr data-click = false, because we need cleanInterval
             elem.setAttribute('data-click','false');
         });
     }
