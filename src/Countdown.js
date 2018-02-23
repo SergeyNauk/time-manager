@@ -40,7 +40,7 @@ class Countdown extends Component {
                 });
 
                 let container = document.querySelector('.container');
-                let template = `<div class="event" data-numberDiv=${this.state.eventCounter}><span class="font-effect-neon"></span><button class="button" data-click="true" onclick="this.setAttribute('data-click','false')">DELETE EVENT</button></div>`
+                let template = `<div class="event" data-numberDiv=${this.state.eventCounter}><span></span><button class="button" data-click="true" onclick="this.setAttribute('data-click','false')">DELETE EVENT</button></div>`
                 container.insertAdjacentHTML('beforeend', template);
 
                 this.eventFactory(this.state.eventCounter, eventName, eventDate);
@@ -91,39 +91,29 @@ class Countdown extends Component {
                         this.deleteElem();
                     }
 
-                    getYear(thisDate) {
-                        this.year = Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365);
-                    }
+                      getYear(thisDate) {
+                          this.year = Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365);
+                     }
 
                     getMonts(thisDate) {
-                        let sumDay = 0;
-                        let monthCounter = 0;
-
-                        let resDay = Math.ceil((((((this.date - thisDate) / 1000) / 60) / 60) / 24)) - 365 * Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365); // consider the number of days net without years
-
-                        if (resDay < this.arrMonth[thisDate.getMonth()]) {
-                            this.month = 0;
+                        if (this.date.getMonth() >= thisDate.getMonth()) {
+                                this.month = this.date.getMonth() - thisDate.getMonth();
                         } else {
-                            this.arrMonth.forEach((elem, index) => {
-                                if (index >= thisDate.getMonth()) {
-                                    monthCounter++;
-                                    sumDay += elem;
-                                    resDay > sumDay ? this.month = monthCounter : this.month;
-                                }
-                            });
+                            this.month = 12 + this.date.getMonth() - thisDate.getMonth();
                         }
                     }
 
                     getDay(thisDate) {
-                        if (this.date.getDate() > thisDate.getDate()) {
+                        if (this.date.getDate() >= thisDate.getDate()) {
                             this.day = this.date.getDate() - thisDate.getDate();
                         } else {
                             this.day = this.date.getDate() + this.arrMonth[thisDate.getMonth()] - thisDate.getDate();
+                            this.month = this.month - 1;
                         }
                     }
 
                     getHours(thisDate) {
-                        if (this.date.getHours() > thisDate.getHours()) {
+                        if (this.date.getHours() >= thisDate.getHours()) {
                             this.hours = this.date.getHours() - thisDate.getHours();
                         } else {
                             this.hours = 24 - thisDate.getHours() + this.date.getHours();
@@ -132,7 +122,7 @@ class Countdown extends Component {
                     }
 
                     getMinutes(thisDate) {
-                        if (this.date.getMinutes() > thisDate.getMinutes()) {
+                        if (this.date.getMinutes() >= thisDate.getMinutes()) {
                             this.minutes = this.date.getMinutes() - thisDate.getMinutes();
                         } else {
                             this.minutes = 60 - thisDate.getMinutes() + this.date.getMinutes();
@@ -564,7 +554,6 @@ class Countdown extends Component {
                     <TextField
                         onFocus = {this.returnError.bind(this)}
                         errorText= {this.state.errorInputDate}
-                        floatingLabelText = "Date of event"
                         class="inputDate"
                         type = 'date'
                         floatingLabelStyle = {{ color: '#9400D3' }}
@@ -575,6 +564,7 @@ class Countdown extends Component {
                         }}
                     />
                     <FlatButton
+                        class = 'countdownBtn'
                         onClick = { this.initEvent.bind(this) }
                         label = "New counter"
                         hoverColor = '#800080'
@@ -586,7 +576,10 @@ class Countdown extends Component {
                             color: '#9400D3',
                             border: 'solid 1px',
                             borderRadius: '6px',
-                            top: '10px'
+                            top: '10px',
+                            position: 'absolute',
+                            left: '515px',
+                            top: '25%'
                         }}
                     />
                 </div>
