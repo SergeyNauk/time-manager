@@ -91,15 +91,25 @@ class Countdown extends Component {
                         this.deleteElem();
                     }
 
-                      getYear(thisDate) {
-                          this.year = Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365);
-                     }
+                    getYear(thisDate) {
+                        this.year = Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365);
+                    }
 
                     getMonts(thisDate) {
-                        if (this.date.getMonth() >= thisDate.getMonth()) {
-                                this.month = this.date.getMonth() - thisDate.getMonth();
+                        let sumDay = 0;
+                        let monthCounter = 0;
+                        let resDay = Math.ceil((((((this.date - thisDate) / 1000) / 60) / 60) / 24)) - 365 * Math.floor((((((this.date - thisDate) / 1000) / 60) / 60) / 24) / 365); // consider the number of days net without years
+
+                        if (resDay < this.arrMonth[thisDate.getMonth()]) {
+                            this.month = 0;
                         } else {
-                            this.month = 12 + this.date.getMonth() - thisDate.getMonth();
+                            this.arrMonth.forEach((elem, index) => {
+                                if (index >= thisDate.getMonth()) {
+                                    monthCounter++;
+                                    sumDay += elem;
+                                    resDay > sumDay ? this.month = monthCounter : this.month;
+                                }
+                            });
                         }
                     }
 
@@ -108,7 +118,6 @@ class Countdown extends Component {
                             this.day = this.date.getDate() - thisDate.getDate();
                         } else {
                             this.day = this.date.getDate() + this.arrMonth[thisDate.getMonth()] - thisDate.getDate();
-                            this.month = this.month - 1;
                         }
                     }
 
