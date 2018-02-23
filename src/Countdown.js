@@ -104,7 +104,7 @@ class Countdown extends Component {
                     }
 
                     getDay(thisDate) {
-                        if (this.date.getDate() >= thisDate.getDate()) {
+                        if (this.date.getDate() > thisDate.getDate()) {
                             this.day = this.date.getDate() - thisDate.getDate();
                         } else {
                             this.day = this.date.getDate() + this.arrMonth[thisDate.getMonth()] - thisDate.getDate();
@@ -113,7 +113,7 @@ class Countdown extends Component {
                     }
 
                     getHours(thisDate) {
-                        if (this.date.getHours() >= thisDate.getHours()) {
+                        if (this.date.getHours() > thisDate.getHours()) {
                             this.hours = this.date.getHours() - thisDate.getHours();
                         } else {
                             this.hours = 24 - thisDate.getHours() + this.date.getHours();
@@ -122,7 +122,7 @@ class Countdown extends Component {
                     }
 
                     getMinutes(thisDate) {
-                        if (this.date.getMinutes() >= thisDate.getMinutes()) {
+                        if (this.date.getMinutes() > thisDate.getMinutes()) {
                             this.minutes = this.date.getMinutes() - thisDate.getMinutes();
                         } else {
                             this.minutes = 60 - thisDate.getMinutes() + this.date.getMinutes();
