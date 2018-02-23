@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="564f2aae-2e57-4eb4-9ed1-ce3532b8c936" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Time.css" afterPath="$PROJECT_DIR$/src/Time.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Time.js" afterPath="$PROJECT_DIR$/src/Time.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Time.scss" afterPath="$PROJECT_DIR$/src/Time.scss" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +30,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Countdown.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Countdown.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Countdown.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="20">
@@ -49,14 +51,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Time.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Time.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Time.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
+            <state relative-caret-position="80">
+              <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Time.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Time.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="20">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,11 +103,9 @@
       <list>
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/reset.scss" />
-        <option value="$PROJECT_DIR$/src/Time.scss" />
         <option value="$PROJECT_DIR$/src/Alarm_clock.js" />
         <option value="$PROJECT_DIR$/src/Stopwatch.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Time.js" />
         <option value="$PROJECT_DIR$/src/index.scss" />
         <option value="$PROJECT_DIR$/src/Home.scss" />
         <option value="$PROJECT_DIR$/src/Home.js" />
@@ -103,6 +113,8 @@
         <option value="$PROJECT_DIR$/src/Countdown.scss" />
         <option value="$PROJECT_DIR$/src/Countdown.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
+        <option value="$PROJECT_DIR$/src/Time.scss" />
+        <option value="$PROJECT_DIR$/src/Time.js" />
       </list>
     </option>
   </component>
@@ -139,6 +151,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -181,8 +195,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -292,7 +304,8 @@
       <workItem from="1519344100537" duration="1398000" />
       <workItem from="1519378196641" duration="8144000" />
       <workItem from="1519389830487" duration="3810000" />
-      <workItem from="1519408657784" duration="385000" />
+      <workItem from="1519408657784" duration="442000" />
+      <workItem from="1519410045114" duration="2962000" />
     </task>
     <task id="LOCAL-00001" summary="add Google Fonts">
       <created>1519257710015</created>
@@ -343,11 +356,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519386249458</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="save dev">
+      <created>1519409067540</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1519409067540</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94653000" />
+    <option name="totallyTimeSpent" value="97672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -382,7 +402,8 @@
     <MESSAGE value="modify gitignore" />
     <MESSAGE value="refactor" />
     <MESSAGE value=" modify getMonth() + modify Countdown.scss" />
-    <option name="LAST_COMMIT_MESSAGE" value=" modify getMonth() + modify Countdown.scss" />
+    <MESSAGE value="save dev" />
+    <option name="LAST_COMMIT_MESSAGE" value="save dev" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -739,13 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/favicon.ico" />
-    <entry file="file://$PROJECT_DIR$/src/Time.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Alarm_clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -790,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Time.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1600">
@@ -831,6 +835,24 @@
             <marker date="1519385850371" expanded="true" signature="22792:23114" ph="..." />
             <marker date="1519385850371" expanded="true" signature="23416:23622" ph="..." />
             <marker date="1519385850371" expanded="true" signature="23416:23677" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Time.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Time.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>

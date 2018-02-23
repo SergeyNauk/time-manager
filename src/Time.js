@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import 'moment/locale/ru';
 import './Time.css';
 
 class Time extends Component {
@@ -12,9 +13,9 @@ class Time extends Component {
 
     componentDidMount() {  // method after render component
         setInterval(()=>{
-            this.setState({timeNow: moment().format('MMMM Do YYYY, h:mm:ss a')
+            this.setState({timeNow: moment().locale("ru").format("MMMM Do, dddd, YYYY, h:mm:ss a")
             });
-        }, 100);
+        }, 1000);
     }
 
     render() {
