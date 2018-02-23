@@ -22,8 +22,6 @@ class Countdown extends Component {
         })
     }
 
-
-
     initEvent() {
         const inputEvent = document.querySelector('.inputEvent');
         const inputDate = document.querySelector('.inputDate');
@@ -59,7 +57,6 @@ class Countdown extends Component {
             }
         }
 /*---------------------------START pattern Factory-------------------------------------------------------------------*/
-
         eventFactory(numberEvent, eventName, eventDate) {
                 class Event {
                     constructor(id, event, date) {
@@ -593,9 +590,9 @@ class Countdown extends Component {
                         }}
                     />
                 </div>
-                    <div class="container">
-                    </div>
+                <div class="container">
                 </div>
+            </div>
         )
     }
 }

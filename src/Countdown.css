@@ -1,11 +1,10 @@
 .countdownHeader {
   margin-top: 10px;
   display: inline-block; }
-
-.countdownHeader p {
-  margin-left: 10px;
-  font-size: 1rem;
-  color: #9400D3; }
+  .countdownHeader p {
+    margin-left: 10px;
+    font-size: 1rem;
+    color: #9400D3; }
 
 .menu {
   width: 100%;
